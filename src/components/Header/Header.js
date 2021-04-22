@@ -5,8 +5,7 @@ import VideoCallIcon from '@material-ui/icons/VideoCall';
 import AppsIcon from '@material-ui/icons/Apps';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import { Avatar} from '@material-ui/core';
-//import Avatar from 'react-avatar';
-//import './Header.css';
+
 import '../../Main.scss';
 
 
