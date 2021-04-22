@@ -1,0 +1,203 @@
+//Variables
+$display:flex;
+$lightgray:lightgray;
+$red:red;
+//App.css
+
+
+*{
+    font-family: Helvetica;
+}
+
+.app__container{
+    display: $display;
+  }
+
+//Header.css
+
+.header__logo {
+	object-fit: contain;
+	margin-left: 15px;
+	height: 35px;
+}
+
+.header__icons {
+	display: $display;
+	align-items: center;
+}
+
+.header {
+    @extend .header__icons;
+	justify-content: space-between;
+	padding: 20px;
+	position: sticky;
+	top: 0;
+	z-index: 999;
+	background-color: white;
+	border-bottom: 1px solid $lightgray;
+}
+
+
+.header__input {
+    @extend .header__icons;
+	width: 40%;
+	border: 1px solid $lightgray;
+}
+
+
+.header__input 
+{input {
+	flex: 1;
+	border: none;
+	outline-width: 0;
+}
+}
+
+.header__inputButton {
+	width: 50px !important;
+	cursor: pointer;
+	background-color: #fafafa;
+	border-left: 1px solid $lightgray;
+	color: gray;
+}
+
+
+
+.header__icon {
+	margin-right: 10px;
+}
+
+
+//Sidebar.css
+.sidebar {
+	flex: 0.2;
+	border-right: 1px solid $lightgray;
+	// position:fixed;
+}
+
+.sidebar {
+    hr {
+	height: 1px;
+	border: 0;
+	background-color: $lightgray;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+}
+
+//SideBarRow.css
+.sidebarRow {
+    @extend .header__icons;
+	padding: 10px 20px;
+	transition: all 0.3s ease;
+}
+
+.sidebarRow__icon {
+	color: #606060;
+	font-size: large !important;
+}
+
+.sidebarRow__title {
+	$display: 1;
+	margin-left: 20px;
+	font-size: 12px;
+	font-weight: 500;
+}
+
+.sidebarRow:hover {
+	background-color: $lightgray;
+	cursor: pointer;
+}
+
+.sidebarRow:hover {
+
+ .sidebarRow__icon {
+	color: $red;
+}
+}
+
+.sidebarRow:hover {.sidebarRow__title {
+	font-weight: bold;
+}
+}
+
+.sidebarRow.selected {
+	background-color: $lightgray;
+}
+
+.sidebarRow.selected .sidebarRow__icon {
+	color: $red;
+}
+
+.sidebarRow.selected .sidebarRow__title {
+	font-weight: bold;
+}
+
+
+
+//RecommendedVideo.css
+.recommendedVideos {
+	flex: 0.8;
+	padding-left: 20px;
+	background-color: white;
+
+}
+
+
+.recommenedVideos__videos {
+	display: $display;
+	flex-wrap: wrap;
+	background-color: #f9f9f9;
+
+}
+.Header__Buttons{
+	padding-top: 10px;
+	padding-bottom: 20px;
+	background-color: white;
+}
+
+
+//HeaderButtons.css
+.header_button{
+    border-radius: 12px ;
+    border-right:0.1px solid $lightgray;
+    margin-left: 16px;
+    font-size: 20 px;
+}
+
+//Video.css
+.video {
+	margin-bottom: 40px;
+	width: 250px;
+	cursor: pointer;
+}
+
+.video__thumbnail {
+	height: 140px;
+	width: 220px;
+}
+
+.video__info {
+	display: $display;
+	margin-top: 10px;
+	padding-right: 30px;
+}
+
+.video__text {
+	margin-left: 10px;
+}
+
+.video__text > h4 {
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+
+.video__text > p {
+	font-size: 14px;
+	color: gray;
+}
+
+.video__avatar {
+	height: 30px !important;
+	width: 30px !important;
+}
